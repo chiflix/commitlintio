@@ -5,7 +5,7 @@
         CIMMIT<span class="lighter">LINT</span>
       </b-col>
       <b-col class="slogen text-left" cols="5">
-        lint commit messages online
+        <h1>lint commit messages online</h1>
       </b-col>
       <b-col class="rules">
         rules: Angular
@@ -66,6 +66,11 @@ export default {
 }
 .title .lighter {
   color: #b2dde5;
+}
+.slogen h1{
+  font-size: 1em;
+  margin: auto;
+  line-height: 1;
 }
 .mainContainer {
   background-color: #453E48;

@@ -23,7 +23,7 @@ button to copy it to clipboard, and paste to your git client.
 
 ### FAQ
 
-- #### Which git commit convention that Commitlint.io support?
+- ##### Which git commit convention that Commitlint.io support?
 
   Right now we provide the convention preset that follow
   AngularJS Git Commit Message Conventions. In future,
@@ -35,6 +35,7 @@ button to copy it to clipboard, and paste to your git client.
 You are welcome to make contact with us by
 [email](mailto:hr@sagittarius.ai) or
 [submit issues](https://github.com/commitlinter/commitlinter.github.io/issues)
+or [contribute](https://github.com/chiflix/commitlintio).
 
 ### Thanks
 
