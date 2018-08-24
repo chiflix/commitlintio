@@ -4,9 +4,10 @@
 
 ## TODO
 
-- create team
+- put footer to component
 - read from clipboard
 - customize rules
+- create team
 
 ## Build Setup
 
