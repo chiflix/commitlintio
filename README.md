@@ -5,6 +5,7 @@
 ## TODO
 
 - put footer to component
+- multi languages
 - read from clipboard
 - customize rules
 - create team

@@ -58,9 +58,9 @@
       </b-alert>
     </b-col>
   </b-row>
-  <b-row :class="combinedMessage && isValidCommitMessage ? '' : 'd-none'">
+  <b-row :class="combinedMessage ? '' : 'd-none'">
     <b-col>
-      <b-card title="Commit Message:">
+      <b-card header="Commit Message:">
         <p class="card-text"
            v-html="markedCombinedMessage">
         </p>
@@ -70,11 +70,12 @@
                   Copy to Clipboard
         </b-button>
         <b-alert :show="dismissCountDown"
-             dismissible
-             :variant="clipboardSuccess ? 'success': 'warning'"
-             @dismissed="dismissCountDown=0"
-             @dismiss-count-down="countDownChanged">
-          <p>{{ clipboardMessage }}</p>
+                 class="clipboard-messages"
+                 dismissible
+                 :variant="clipboardSuccess ? 'success': 'warning'"
+                 @dismissed="dismissCountDown=0"
+                 @dismiss-count-down="countDownChanged">
+                 {{ clipboardMessage }}
         </b-alert>
       </b-card>
     </b-col>
@@ -106,7 +107,7 @@ export default {
   - don't capitalize first letter
   - no dot (.) at the end
   - in around 50 characters or less`,
-      tipType: 'must be one of these types',
+      tipType: 'must be one of these values',
       tipBody: `- use imperative, present tense: “change” not “changed” nor “changes”
 - includes motivation for the change and contrasts with previous behavior
 - wrap it to about 72 characters`,
@@ -164,7 +165,7 @@ export default {
       return new Promise((resolve) => {
         if (!this.combinedMessage) {
           this.isValidCommitMessage = false;
-          resolve('empty commit message');
+          resolve('commit message may not be empty');
           return;
         }
         const opts = lintOpts.Angular;
@@ -198,7 +199,7 @@ export default {
       }, (e) => {
         this.dismissCountDown = 5;
         this.clipboardSuccess = false;
-        this.clipboardMessage = `Copied to Clipboard Failed ${e}`;
+        this.clipboardMessage = `Failed to CopyToClipboard: ${e}`;
       });
     },
   },
@@ -219,7 +220,7 @@ export default {
   text-align: left;
   color: #555555;
 }
-.card-title {
-  font-size: 1.3em;
+.clipboard-messages {
+  margin-top: 1em;
 }
 </style>
