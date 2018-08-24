@@ -37,8 +37,9 @@ You are welcome to make contact with us by
 [submit issues](https://github.com/commitlinter/commitlinter.github.io/issues)
 or [contribute](https://github.com/chiflix/commitlintio).
 
-### Thanks
+### Thanks and Related projects
 
-- [commitlint](https://github.com/marionebl/commitlint)
-- [commitizen](https://github.com/commitizen/cz-cli)
+- [commitlint](https://github.com/marionebl/commitlint) – Lint commit messages 
+- [commitizen](https://github.com/commitizen/cz-cli) – Simple commit conventions for internet citizens
+- [conventional-changelog](https://github.com/conventional-changelog/conventional-changelog) - Generate a changelog from conventional commit history
 `;
