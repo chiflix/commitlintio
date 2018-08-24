@@ -15,7 +15,9 @@
     <b-col cols="9">
       <b-form-input v-model="commitScope"
                     placeholder="<scope>"
-                    v-b-popover.hover.bottom="tipScope">
+                    v-b-popover.hover.bottom="tipScope"
+                    name="commitScope"
+                    autocomplete="on">
       </b-form-input>
     </b-col>
   </b-row>

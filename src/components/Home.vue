@@ -74,7 +74,7 @@ export default {
 }
 .mainContainer {
   background-color: #453E48;
-  padding: 4em 0;
+  padding: 3.5em 0;
 }
 .footer {
   color: #fefeff;
