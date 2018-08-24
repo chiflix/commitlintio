@@ -1,6 +1,12 @@
 # commitlintio
 
-> commit message lint online, commitlint online.
+> commit message lint online, commitlint.io .
+
+## TODO
+
+- create team
+- read from clipboard
+- customize rules
 
 ## Build Setup
 

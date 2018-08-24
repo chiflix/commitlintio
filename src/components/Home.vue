@@ -79,5 +79,6 @@ export default {
 .footer {
   color: #fefeff;
   padding: 0.8em;
+  max-width: 40em;
 }
 </style>

@@ -31,7 +31,7 @@
   <b-row>
     <b-col>
       <b-form-textarea v-model="commitMessageBody"
-                       placeholder="body (optional)"
+                       placeholder="<body> detailed explanatory text (optional)"
                        :rows="3"
                        :max-rows="6"
                        v-b-popover.hover.bottom="tipBody">
@@ -41,7 +41,7 @@
   <b-row>
     <b-col>
       <b-form-textarea v-model="commitMessageFooter"
-                      placeholder="footer (optional)"
+                      placeholder="<footer> breaking changes and referencing issues  (optional)"
                       :rows="1"
                       :max-rows="6"
                       v-b-popover.hover.bottom="tipFooter">
@@ -102,10 +102,12 @@ export default {
       tipScope: 'could be anything specifying place of the commit change. For example $location, $browser, $compile, $rootScope, ngHref, ngClick, ngView, etc...',
       tipSubject: `- use imperative, present tense: "change" not “changed” nor “changes”
   - don't capitalize first letter
-  - no dot (.) at the end`,
-      tipType: 'must be one of the options',
+  - no dot (.) at the end
+  - in around 50 characters or less`,
+      tipType: 'must be one of these types',
       tipBody: `- use imperative, present tense: “change” not “changed” nor “changes”
-- includes motivation for the change and contrasts with previous behavior`,
+- includes motivation for the change and contrasts with previous behavior
+- wrap it to about 72 characters`,
       tipFooter: `- contain any information about breaking changes with the description of the change, justification and migration notes
 - reference GitHub issues that this commit Closes. such as closed bugs should be listed in the footer prefixed with "Closes" keyword like: "Closes #234, #241"`,
     };
@@ -119,7 +121,7 @@ export default {
         fix: 'bug fix',
         docs: 'documentation',
         style: 'formatting, missing semi colons, etc.',
-        refactor: 'neither fixes a bug or adds a feature',
+        refactor: 'restructuring existing code, but not bug or feature',
         test: 'adding missing tests',
         chore: 'maintain',
         build: 'build system or external dependencies changes',
@@ -206,6 +208,7 @@ export default {
 .linterContainer {
   background-color: #86818B;
   padding: 0.8em;
+  max-width: 40em;
 }
 .row {
   padding: 0.2em;
