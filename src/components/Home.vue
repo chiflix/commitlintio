@@ -28,27 +28,21 @@
     </b-row>
     <b-row>
         <b-col class="text-left">
-          <b-container class="footer" v-html="compiledMarkdown">
-          </b-container>
+          <Footer></Footer>
         </b-col>
     </b-row>
   </b-container>
 </template>
 
 <script>
-import marked from 'marked';
 import Linter from './Linter';
-import msg from '../helper/messages';
+import Footer from './Footer';
 
 export default {
   name: 'Home',
   components: {
     Linter,
-  },
-  computed: {
-    compiledMarkdown() {
-      return marked(msg, { sanitize: true });
-    },
+    Footer,
   },
 };
 </script>
@@ -70,10 +64,5 @@ export default {
 .mainContainer {
   background-color: #453E48;
   padding: 3.5em 0;
-}
-.footer {
-  color: #fefeff;
-  padding: 0.8em;
-  max-width: 40em;
 }
 </style>
