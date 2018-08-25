@@ -16,6 +16,11 @@
         <Linter></Linter>
       </b-col>
     </b-row>
+    <b-row>
+        <b-col class="text-left">
+          <Footer></Footer>
+        </b-col>
+    </b-row>
     <b-row class="ads">
       <b-col>
         <script2>
@@ -25,11 +30,6 @@
          });
         </script2>
       </b-col>
-    </b-row>
-    <b-row>
-        <b-col class="text-left">
-          <Footer></Footer>
-        </b-col>
     </b-row>
   </b-container>
 </template>
