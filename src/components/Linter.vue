@@ -12,7 +12,7 @@
         </template>
       </b-form-select>
     </b-col>
-    <b-col cols="9">
+    <b-col cols="8">
       <b-form-input v-model="commitScope"
                     placeholder="<scope>"
                     v-b-popover.hover.bottom="tipScope"
