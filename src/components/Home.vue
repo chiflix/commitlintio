@@ -2,7 +2,7 @@
   <b-container fluid>
     <b-row class="navbar">
       <b-col class="title">
-        CIMMIT<span class="lighter">LINT</span>
+        COMMIT<span class="lighter">LINT</span>
       </b-col>
       <b-col class="slogan text-left d-none d-md-block" cols="4">
         lint commit messages online
